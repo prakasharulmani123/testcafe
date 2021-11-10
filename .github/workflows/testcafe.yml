@@ -6,8 +6,11 @@ jobs:
     name: Run TestCafe Tests
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Install TestCafe from 'npm' and Run Tests
-        uses: DevExpress/testcafe-action@latest
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
         with:
-          args: "chrome test.js"
+          node-version: "10.x"
+      - uses: Meemaw/testcafe-action@master
+        with:
+          args: "chrome:headless test.ts"
+
