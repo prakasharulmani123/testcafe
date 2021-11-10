@@ -6,6 +6,6 @@ fixture `Google Title Test`
 test('My first test', async t => {
     // Test code
     await t
-        .expect(Selector("title").innerText).eql('Google AAA')
+        .expect(Selector("title").innerText).eql('Google')
 });
 
