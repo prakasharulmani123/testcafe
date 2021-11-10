@@ -12,5 +12,5 @@ jobs:
           node-version: "10.x"
       - uses: Meemaw/testcafe-action@master
         with:
-          args: "chrome:headless test.ts"
+          args: "chrome:headless tests"
 

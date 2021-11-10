@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
 
-fixture `Getting Started`
+fixture `Google Title Test`
     .page `https://www.google.com/`;
 
 test('My first test', async t => {
