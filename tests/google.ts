@@ -1,9 +1,9 @@
 import { Selector } from 'testcafe';
 
-fixture `Google Title Test`
+fixture `Google Title`
     .page `https://www.google.com/`;
 
-test('My first test', async t => {
+test('Google Title Test', async t => {
     // Test code
     await t
         .expect(Selector("title").innerText).eql('Google')
