@@ -15,7 +15,7 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           STAGING_URL: ${{ secrets.STAGING_URL }}
-        run: "export USERNAME=${{ secrets.USERNAME }} && export PASSWORD=${{ secrets.USERNAME }} && export STAGING_URL=${{ secrets.STAGING_URL }}"
+        run: "export USERNAME=ajay && export PASSWORD=123456 && export STAGING_URL=https://sumanas.medizura.com"
       - uses: Meemaw/testcafe-action@master
         with:
           args: "chrome:headless tests"
