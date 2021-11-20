@@ -1,9 +1,13 @@
-import { Selector } from 'testcafe';
+import { test, Selector } from 'testcafe';
+import Login from './login';
 
 fixture `Pharmacy Sales`
-    .page `https://sumanas.medizura.com/login`;
+    .page `${process.env.STAGING_URL}/login`;
     
 test('Create Sale', async (t: TestController) => {
+    // await for login
+    await Login(test);
+
     await t
         .typeText(Selector('#loginform').nth(1).find('[class^="form-control form-control-lg ng-untouched ng-prist"]'), 'ajay')
         .pressKey('tab')
