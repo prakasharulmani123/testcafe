@@ -11,6 +11,10 @@ jobs:
         with:
           node-version: "10.x"
       - uses: Meemaw/testcafe-action@master
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          STAGING_URL: ${{ secrets.STAGING_URL }}
         with:
           args: "chrome:headless tests"
 
