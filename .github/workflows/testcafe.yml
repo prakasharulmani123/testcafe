@@ -16,5 +16,5 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           STAGING_URL: ${{ secrets.STAGING_URL }}
         with:
-          args: "chrome:headless tests"
+          args: "export USERNAME=${{ secrets.USERNAME }} && export PASSWORD=${{ secrets.USERNAME }} && export STAGING_URL=${{ secrets.STAGING_URL }} && chrome:headless tests"
 
