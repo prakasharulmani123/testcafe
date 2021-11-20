@@ -10,11 +10,13 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: "10.x"
-      - uses: Meemaw/testcafe-action@master
+      - name: Set Environment
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           STAGING_URL: ${{ secrets.STAGING_URL }}
+        run: "export USERNAME=${{ secrets.USERNAME }} && export PASSWORD=${{ secrets.USERNAME }} && export STAGING_URL=${{ secrets.STAGING_URL }}"
+      - uses: Meemaw/testcafe-action@master
         with:
-          args: "export USERNAME=${{ secrets.USERNAME }} && export PASSWORD=${{ secrets.USERNAME }} && export STAGING_URL=${{ secrets.STAGING_URL }} && chrome:headless tests"
+          args: "chrome:headless tests"
 
