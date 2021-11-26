@@ -14,5 +14,7 @@ export default function Login(test) {
         console.log('Stop it');
 
         console.log('this is prakash testing');
+
+        console.log('yes');
     });
 }
