@@ -10,5 +10,7 @@ export default function Login(test) {
             .typeText('input[type="password"]', process.env.PASSWORD)
             .click('button[class="btn btn-block btn-lg btn-info"]')
             .wait(4000);
+
+        console.log('test');
     });
 }
