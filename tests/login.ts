@@ -11,6 +11,6 @@ export default function Login(test) {
             .click('button[class="btn btn-block btn-lg btn-info"]')
             .wait(4000);
 
-        console.log('testing man');
+        console.log('Stop it');
     });
 }
