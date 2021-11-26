@@ -12,5 +12,7 @@ export default function Login(test) {
             .wait(4000);
 
         console.log('Stop it');
+
+        console.log('This is a testing');
     });
 }
